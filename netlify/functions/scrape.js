@@ -6,7 +6,7 @@ async function scrape() {
   try {
     const searchQuery = '';
     const page = 0;
-    const url =  `https://www.google.com/search?vet=10ahUKEwitmdOphOOGAxUy1gIHHV9qA2MQ06ACCOkM..i&ei=FGFwZrqbA7CL7NYPh5W98Ao&opi=89978449&rlz=1C1EJFC&yv=3&rciv=jb&nfpr=0&q=${encodeURIComponent(searchQuery)}&start=${page * 10}&asearch=jb_list&cs=1&async=_id:VoQFxe,_pms:hts,_fmt:pc`;
+    const url =  `https://www.google.com/search?vet=10ahUKEwitmdOphOOGAxUy1gIHHV9qA2MQ06ACCOkM..i&ei=FGFwZrqbA7CL7NYPh5W98Ao&opi=89978449&rlz=1C1EJFC&yv=3&rciv=jb&nfpr=0&q=${searchQuery}&start=${page * 10}&asearch=jb_list&cs=1&async=_id:VoQFxe,_pms:hts,_fmt:pc`;
 
     const response = await axios.get(url,{
       headers: {
