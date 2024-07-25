@@ -1,12 +1,11 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-
-async function scrape() {
+exports.handler = async function (event, context) {
     
   try {
-    const searchQuery = '';
-    const page = 0;
-    const url =  `https://www.google.com/search?vet=10ahUKEwitmdOphOOGAxUy1gIHHV9qA2MQ06ACCOkM..i&ei=FGFwZrqbA7CL7NYPh5W98Ao&opi=89978449&rlz=1C1EJFC&yv=3&rciv=jb&nfpr=0&q=software&start=10&asearch=jb_list&cs=1&async=_id:VoQFxe,_pms:hts,_fmt:pc`;
+    const searchQuery = event.queryStringParameters.searchQuery || '';
+    const page = event.queryStringParameters.page || 0;
+    const url =  `https://www.google.com/search?vet=10ahUKEwitmdOphOOGAxUy1gIHHV9qA2MQ06ACCOkM..i&ei=FGFwZrqbA7CL7NYPh5W98Ao&opi=89978449&rlz=1C1EJFC&yv=3&rciv=jb&nfpr=0&q=${searchQuery}&start=${page}0&asearch=jb_list&cs=1&async=_id:VoQFxe,_pms:hts,_fmt:pc`;
 
     const response = await axios.get(url,{
       headers: {
