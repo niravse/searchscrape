@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-async function scrape(searchQuery, page) {
+async function scrape() {
     
   try {
     
