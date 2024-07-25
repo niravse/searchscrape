@@ -87,4 +87,3 @@ exports.handler = async function (event, context) {
   }
 }
 
-scrape();
