@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {
       headers: {
         'Access-Control-Allow-Origin': '*', // Allow requests from any origin
         'Access-Control-Allow-Headers': 'Content-Type, Authorization', // Allow specific headers
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', // Allow specific methods
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'X-Forwarded-For': '102.117.134.81'// Allow specific methods
       },
       body: '' // Preflight requests usually don't require a body
     };
