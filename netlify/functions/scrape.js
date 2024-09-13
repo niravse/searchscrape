@@ -9,9 +9,9 @@ exports.handler = async function (event, context) {
       headers: {
         'Access-Control-Allow-Origin': '*', // Allow requests from any origin
         'Access-Control-Allow-Headers': 'Content-Type, Authorization', // Allow specific headers
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',// Allow specific methods
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', // Allow specific methods
       },
-      body: '' // Preflight requests usually don't require a body
+      body: '', // Preflight requests usually don't require a body
     };
   }
 
@@ -22,7 +22,8 @@ exports.handler = async function (event, context) {
 
     const response = await axios.get(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'X-Forwarded-For': '102.117.93.225', // Add the X-Forwarded-For header
       }
     });
 
@@ -82,7 +83,7 @@ exports.handler = async function (event, context) {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*',// Allow requests from any origin
+        'Access-Control-Allow-Origin': '*', // Allow requests from any origin
       },
       body: JSON.stringify({
         numofLinks,
