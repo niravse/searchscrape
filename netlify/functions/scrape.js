@@ -51,7 +51,7 @@ exports.handler = async function (event, context) {
       currentnum.push($(elem).text().trim());
     });
     let titles = [];
-    $('div.BjJfJf.PUpOsf').each((i, elem) => {
+    $('div.tNxQIb.PUpOsf').each((i, elem) => {
       titles.push($(elem).text().trim());
     });
     let jobElements = [];
