@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {
     }
 
     let currentnum = [];
-    $('div.BjJfJf.PUpOsf').each((i, elem) => {
+    $('div.tNxQIb.PUpOsf').each((i, elem) => {
       currentnum.push($(elem).text().trim());
     });
     let titles = [];
@@ -59,7 +59,7 @@ exports.handler = async function (event, context) {
       jobElements.push($(elem).attr('href'));
     });
     let descriptions = [];
-    $("span.HBvzbc").each((i, elem) => {
+    $("span.hkXmid").each((i, elem) => {
       descriptions.push($(elem).text().trim());
     });
     let tempLocation = [];
@@ -67,7 +67,7 @@ exports.handler = async function (event, context) {
       tempLocation.push($(elem).text().trim());
     });
     let companies = [];
-    $('div.nJlQNd.sMzDkb').each((i, elem) => {
+    $('div.waQ7qe.cS4Vcb-pGL6qe-ysgGef').each((i, elem) => {
       companies.push($(elem).text().trim());
     });
     let data = [];
