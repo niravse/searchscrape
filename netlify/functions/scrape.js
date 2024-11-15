@@ -63,7 +63,7 @@ exports.handler = async function (event, context) {
       descriptions.push($(elem).text().trim());
     });
     let tempLocation = [];
-    $('tNxQIb PUpOsf').each((i, elem) => {
+    $('div.wHYlTd MKCbgd a3jPc').each((i, elem) => {
       tempLocation.push($(elem).text().trim());
     });
     let companies = [];
